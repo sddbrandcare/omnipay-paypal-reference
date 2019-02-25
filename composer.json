@@ -26,11 +26,8 @@
   },
   "require": {
     "php": "^7.1",
-    "omnipay/common": "~2.0",
-    "omnipay/paypal": "^2.6"
-  },
-  "require-dev": {
-    "omnipay/tests": "~2.0"
+    "league/omnipay": "~3.0",
+    "omnipay/paypal": "~3.0"
   },
   "scripts": {
     "test": "phpunit"
