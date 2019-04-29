@@ -26,7 +26,6 @@
   },
   "require": {
     "php": "^7.1",
-    "league/omnipay": "~2.0",
     "omnipay/paypal": "~2.0"
   },
   "scripts": {
