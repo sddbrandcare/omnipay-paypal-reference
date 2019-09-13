@@ -20,6 +20,18 @@ class DoReferenceTransactionRequest extends AbstractRequest
         $data['CURRENCYCODE'] = $this->getCurrency();
         $data['PAYMENTACTION'] = 'Sale';
 
+        $card = $this->getCard();
+        if ($card) {
+            $data['SHIPTONAME'] = $card->getName();
+            $data['SHIPTOSTREET'] = $card->getAddress1();
+            $data['SHIPTOSTREET2'] = $card->getAddress2();
+            $data['SHIPTOCITY'] = $card->getCity();
+            $data['SHIPTOSTATE'] = $card->getState();
+            $data['SHIPTOCOUNTRY'] = $card->getCountry();
+            $data['SHIPTOZIP'] = $card->getPostcode();
+            $data['SHIPTOPHONENUM'] = $card->getPhone();
+        }
+
         return $data;
     }
 
